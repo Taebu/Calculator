@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CalculatorBrain.h"
+@interface ViewController : UIViewController{
+    IBOutlet UILabel *display;
+    CalculatorBrain *brain;
+}
 
-@interface ViewController : UIViewController
-
-
+@property (weak, nonatomic) IBOutlet UILabel *display;
+-(IBAction)digitPressed:(UIButton *)sender;
+-(IBAction)operationPressed:(UIButton *)sender;
 @end
 
